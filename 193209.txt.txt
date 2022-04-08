@@ -1,0 +1,63 @@
+
+$ git init
+
+$ git status
+
+
+
+$ git add shopping_list.txt
+
+
+
+
+$ git commit -m "Add quantities to the items"
+[master b1408da] Add quantities to the items
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+ideapad@DESKTOP-VOF6HUR MINGW64 /c/Git (master)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+ideapad@DESKTOP-VOF6HUR MINGW64 /c/Git (branch1)
+$ git checkout -b branch2
+Switched to a new branch 'branch2'
+
+ideapad@DESKTOP-VOF6HUR MINGW64 /c/Git (branch2)
+$ git log
+commit b1408da1ed2b5d958248ab3829e592e2e18b004a (HEAD -> branch2, master, 1)
+Author: Andrej Manev <andrej_manev@yahoo.com>
+Date:   Fri Mar 25 19:59:23 2022 +0100
+
+    Add quantities to the items
+
+commit 1f670d8f4382574f34d21648a32be9032e79c709
+Author: Andrej Manev <andrej_manev@yahoo.com>
+Date:   Fri Mar 25 19:57:29 2022 +0100
+
+    Add 5 items to the shopping list
+
+ideapad@DESKTOP-VOF6HUR MINGW64 /c/Git (branch2)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repositing
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+git push --set-upstream origin master
+To https://github.com/AndrejManev/SI_2022_lab1_193209
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/AndrejManev/SI_2022_lab1_193209'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.(Tука имав проблем кој го решив со:git remote add origin https://github.com/AndrejManev/SI_2022_lab1_193209
+ и git pull --rebase origin master)
+ 
+
+git push -u origin master
+
+
+
